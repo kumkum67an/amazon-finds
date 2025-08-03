@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vib on Budget - Pinterest-Inspired Amazon Finds</title>
+    <meta name="description" content="Discover and shop Pinterest-inspired Amazon finds on a budget!">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Affiliate Disclosure -->
+    <div style="background:#fffbe7; color:#8a6d3b; padding:8px 0; text-align:center; font-size:0.95em; border-bottom:1px solid #ffecb5;">
+        As an Amazon Associate, I earn from qualifying purchases.
+    </div>
+
     <!-- Optional Popup -->
     <div id="popup" class="popup">
         <div class="popup-content">
             <span class="close-popup">&times;</span>
-            <p>View the product on amazon.  Shop now!</p>
+            <p>📣 Saw it on Pinterest? Shop now!</p>
             <button class="btn btn--primary" onclick="closePopup()">Start Shopping</button>
         </div>
     </div>
@@ -21,16 +27,18 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <h1>✨ Vibe on Budget</h1>
+                    <h1>✨ Vib on Budget</h1>
                 </div>
                 <nav class="nav">
                     <ul class="nav-list">
                         <li><a href="#home" class="nav-link">Home</a></li>
                         <li><a href="#amazon-finds" class="nav-link">Amazon Finds</a></li>
                         <li class="dropdown">
-                            
-                           
-                                
+                            <a href="#" class="nav-link dropdown-toggle" onclick="toggleDropdown(event)">Dress Like... ▼</a>
+                            <div class="dropdown-menu">
+                                <a href="#alia" class="dropdown-item" onclick="scrollToSection('alia')">Alia Bhatt</a>
+                                <a href="#jennie" class="dropdown-item" onclick="scrollToSection('jennie')">Jennie Blackpink</a>
+                            </div>
                         </li>
                     </ul>
                 </nav>
@@ -48,7 +56,7 @@
                         <h3>📌 Alia's ₹699 Dress Dupe</h3>
                         <p>Trending Bollywood-inspired dress</p>
                         <div class="price">₹699</div>
-                        <a href="https://amazon.in" target="_blank" class="btn btn--primary" onclick="handleAmazonClick(this)">Shop Now on Amazon</a>
+                        <a href="YOUR_PRODUCT_LINK_HERE" target="_blank" rel="nofollow noopener" class="btn btn--primary" onclick="handleAmazonClick(this)">View on Amazon</a>
                     </div>
                 </div>
                 <div class="featured-card">
@@ -56,7 +64,7 @@
                         <h3>📌 Jennie's K-Pop Co-ord</h3>
                         <p>Korean fashion coord set</p>
                         <div class="price">₹799</div>
-                        <a href="https://amazon.in" target="_blank" class="btn btn--primary" onclick="handleAmazonClick(this)">Shop Now on Amazon</a>
+                        <a href="YOUR_PRODUCT_LINK_HERE" target="_blank" rel="nofollow noopener" class="btn btn--primary" onclick="handleAmazonClick(this)">View on Amazon</a>
                     </div>
                 </div>
                 <div class="featured-card">
@@ -64,7 +72,7 @@
                         <h3>📌 Study Desk Setup Under ₹2000</h3>
                         <p>Complete minimal desk setup</p>
                         <div class="price">₹1999</div>
-                        <a href="https://amazon.in" target="_blank" class="btn btn--primary" onclick="handleAmazonClick(this)">Shop Now on Amazon</a>
+                        <a href="YOUR_PRODUCT_LINK_HERE" target="_blank" rel="nofollow noopener" class="btn btn--primary" onclick="handleAmazonClick(this)">View on Amazon</a>
                     </div>
                 </div>
             </div>
@@ -81,7 +89,7 @@
                     <div class="card-content">
                         <h3>LED Fairy Lights</h3>
                         <div class="price">₹249</div>
-                        <a href="https://amazon.in" target="_blank" class="btn btn--outline" onclick="handleAmazonClick(this)">Amazon Link</a>
+                        <a href="YOUR_PRODUCT_LINK_HERE" target="_blank" rel="nofollow noopener" class="btn btn--outline" onclick="handleAmazonClick(this)">View on Amazon</a>
                     </div>
                 </div>
                 <div class="budget-card">
@@ -89,7 +97,7 @@
                     <div class="card-content">
                         <h3>Jewelry Organizer</h3>
                         <div class="price">₹199</div>
-                        <a href="https://amazon.in" target="_blank" class="btn btn--outline" onclick="handleAmazonClick(this)">Amazon Link</a>
+                        <a href="YOUR_PRODUCT_LINK_HERE" target="_blank" rel="nofollow noopener" class="btn btn--outline" onclick="handleAmazonClick(this)">View on Amazon</a>
                     </div>
                 </div>
                 <div class="budget-card">
@@ -97,7 +105,7 @@
                     <div class="card-content">
                         <h3>Crop Top</h3>
                         <div class="price">₹289</div>
-                        <a href="https://amazon.in" target="_blank" class="btn btn--outline" onclick="handleAmazonClick(this)">Amazon Link</a>
+                        <a href="YOUR_PRODUCT_LINK_HERE" target="_blank" rel="nofollow noopener" class="btn btn--outline" onclick="handleAmazonClick(this)">View on Amazon</a>
                     </div>
                 </div>
             </div>
@@ -136,14 +144,14 @@
                     <div class="card-content">
                         <h3>Minimal Desk Setup</h3>
                         <div class="price">₹1499</div>
-                        <a href="https://amazon.in" target="_blank" class="btn btn--primary" onclick="handleAmazonClick(this)">Amazon Link</a>
+                        <a href="YOUR_PRODUCT_LINK_HERE" target="_blank" rel="nofollow noopener" class="btn btn--primary" onclick="handleAmazonClick(this)">View on Amazon</a>
                     </div>
                 </div>
                 <div class="essential-card">
                     <div class="card-content">
                         <h3>Pinterest Aesthetic Bedding</h3>
                         <div class="price">₹1199</div>
-                        <a href="https://amazon.in" target="_blank" class="btn btn--primary" onclick="handleAmazonClick(this)">Amazon Link</a>
+                        <a href="YOUR_PRODUCT_LINK_HERE" target="_blank" rel="nofollow noopener" class="btn btn--primary" onclick="handleAmazonClick(this)">View on Amazon</a>
                     </div>
                 </div>
             </div>
