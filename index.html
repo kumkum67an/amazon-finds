@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vib on Budget - Pinterest-Inspired Amazon Finds</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Optional Popup -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-popup">&times;</span>
+            <p>📣 Saw it on Pinterest? Shop now!</p>
+            <button class="btn btn--primary" onclick="closePopup()">Start Shopping</button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>✨ Vib on Budget</h1>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="#home" class="nav-link">Home</a></li>
+                        <li><a href="#amazon-finds" class="nav-link">Amazon Finds</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" onclick="toggleDropdown(event)">Dress Like... ▼</a>
+                            <div class="dropdown-menu">
+                                <a href="#alia" class="dropdown-item" onclick="scrollToSection('alia')">Alia Bhatt</a>
+                                <a href="#jennie" class="dropdown-item" onclick="scrollToSection('jennie')">Jennie Blackpink</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h2 class="section-title">🔥 Top Pinterest-Inspired Amazon Picks</h2>
+            <div class="featured-grid">
+                <div class="featured-card">
+                    <div class="card-content">
+                        <h3>📌 Alia's ₹699 Dress Dupe</h3>
+                        <p>Trending Bollywood-inspired dress</p>
+                        <div class="price">₹699</div>
+                        <a href="https://amazon.in" target="_blank" class="btn btn--primary" onclick="handleAmazonClick(this)">Shop Now on Amazon</a>
+                    </div>
+                </div>
+                <div class="featured-card">
+                    <div class="card-content">
+                        <h3>📌 Jennie's K-Pop Co-ord</h3>
+                        <p>Korean fashion coord set</p>
+                        <div class="price">₹799</div>
+                        <a href="https://amazon.in" target="_blank" class="btn btn--primary" onclick="handleAmazonClick(this)">Shop Now on Amazon</a>
+                    </div>
+                </div>
+                <div class="featured-card">
+                    <div class="card-content">
+                        <h3>📌 Study Desk Setup Under ₹2000</h3>
+                        <p>Complete minimal desk setup</p>
+                        <div class="price">₹1999</div>
+                        <a href="https://amazon.in" target="_blank" class="btn btn--primary" onclick="handleAmazonClick(this)">Shop Now on Amazon</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Budget Finds Section -->
+    <section id="amazon-finds" class="budget-finds">
+        <div class="container">
+            <h2 class="section-title">💸 Amazon Finds Under ₹300</h2>
+            <div class="budget-grid">
+                <div class="budget-card">
+                    <div class="card-number">1.</div>
+                    <div class="card-content">
+                        <h3>LED Fairy Lights</h3>
+                        <div class="price">₹249</div>
+                        <a href="https://amazon.in" target="_blank" class="btn btn--outline" onclick="handleAmazonClick(this)">Amazon Link</a>
+                    </div>
+                </div>
+                <div class="budget-card">
+                    <div class="card-number">2.</div>
+                    <div class="card-content">
+                        <h3>Jewelry Organizer</h3>
+                        <div class="price">₹199</div>
+                        <a href="https://amazon.in" target="_blank" class="btn btn--outline" onclick="handleAmazonClick(this)">Amazon Link</a>
+                    </div>
+                </div>
+                <div class="budget-card">
+                    <div class="card-number">3.</div>
+                    <div class="card-content">
+                        <h3>Crop Top</h3>
+                        <div class="price">₹289</div>
+                        <a href="https://amazon.in" target="_blank" class="btn btn--outline" onclick="handleAmazonClick(this)">Amazon Link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Celebrity Style Section -->
+    <section class="celebrity-style">
+        <div class="container">
+            <h2 class="section-title">🎀 Dress Like a Celebrity</h2>
+            <div class="celebrity-grid">
+                <div class="celebrity-card" id="alia">
+                    <div class="card-content">
+                        <h3>Alia Bhatt Looks</h3>
+                        <p>Bollywood style inspiration</p>
+                        <button class="btn btn--secondary" onclick="showCelebrityAlert('Alia Bhatt Looks')">View All</button>
+                    </div>
+                </div>
+                <div class="celebrity-card" id="jennie">
+                    <div class="card-content">
+                        <h3>Jennie from Blackpink</h3>
+                        <p>K-Pop fashion trends</p>
+                        <button class="btn btn--secondary" onclick="showCelebrityAlert('Jennie from Blackpink')">View All</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Home Essentials Section -->
+    <section class="home-essentials">
+        <div class="container">
+            <h2 class="section-title">🏡 Home Essentials</h2>
+            <div class="essentials-grid">
+                <div class="essential-card">
+                    <div class="card-content">
+                        <h3>Minimal Desk Setup</h3>
+                        <div class="price">₹1499</div>
+                        <a href="https://amazon.in" target="_blank" class="btn btn--primary" onclick="handleAmazonClick(this)">Amazon Link</a>
+                    </div>
+                </div>
+                <div class="essential-card">
+                    <div class="card-content">
+                        <h3>Pinterest Aesthetic Bedding</h3>
+                        <div class="price">₹1199</div>
+                        <a href="https://amazon.in" target="_blank" class="btn btn--primary" onclick="handleAmazonClick(this)">Amazon Link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Vib on Budget. Discover Pinterest-inspired finds on Amazon.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
